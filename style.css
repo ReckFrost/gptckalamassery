@@ -318,38 +318,55 @@ div.blueTable {
 }
 .company h2{
     font-size: 35px;
-    font-weight: lighter;
-    color: black;
+    font-weight: 400;
+    color: gray;
+    padding-bottom: 50px;
 }
 
-.img-area{
+.company-container{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
 }
-.single-img{
-    width: 360px;
-    height: 400px;
-    padding: 0 20px 20px;
+.company .card{
+    width: 270px;
+    margin: 10px;
 }
-.company img{
-    width: 350px;
-    height: 276px;
+
+.company .card-image{
+    height: 150px;
+    margin-bottom: 15px;
+    background-size: cover;
 }
-.company h3{
+.company .company-1{
+    background-image: url('images/l&t.jpg');
+}
+.company .company-2{
+    background-image: url('images/voltas.jpg');
+}
+.company .company-3{
+    background-image: url('images/tatae.jpg');
+}
+.company p{
+    padding: 10px;
+}
+
+.company .card a{
+    text-decoration: none;
+    color: rgb(62, 62, 62);
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
-    font-weight: lighter;
+    font-weight: 500;
+    padding: 10px;
 }
-img:hover{
-    opacity: .5;
-    transition: .9s;
+
+.company .card:hover{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all .5s ease;
 }
 
 @media only screen and (max-width: 550px){
@@ -358,6 +375,7 @@ img:hover{
         font-weight: 350;
     }
 }
+
 
 /* Student */
 .student{
@@ -370,38 +388,85 @@ img:hover{
 }
 .student h2{
     font-size: 35px;
-    font-weight: lighter;
+    font-weight: 400;
     padding-bottom: 50px;
-    color: black;
+    color: gray;
+}
+
+.stud-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
 }
 .stud-area{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
     width: 90%;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+.stud-team{
+    width: 150px;
+    height: 200px;
+    padding: 24px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s ease-out;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.stud-team:hover{
+    transform: translateY(15px);
+}
+.stud-team:hover:before{
+    opacity: 1;
+}
+.stud-team:hover .stud-text{
+    opacity: 1;
+    transform: translateY(0);
+}
+.stud-team:befor{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
     width: 100%;
     height: 100%;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
 }
-.stud-img{
-    width: 360px;
-    height: 400px;
-    padding: 0 20px 20px;
+.stud-team img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
-.student img{
-    width: 250px;
-    height: 232px;
+.stud-team .stud-text{
+    position: relative;
+    z-index: 3;
+    color:  white;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.5s;
 }
-.student h3{
-    text-align: center;
+.stud-text h3{
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+.stud-text p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: lighter;
-}
-img:hover{
-    opacity: .5;
-    transition: .9s;
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 550px){
